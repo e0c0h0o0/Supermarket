@@ -17,7 +17,8 @@ public class EntityFactory {
     }
 
     // Create a product instance
-    public static Product createProduct(String name, double price, double cost, int quantity, String category) {
-        return new Product(name, price, cost, quantity,category);
+    public static Product createProduct(String productID, String name, double price, double cost, int quantity,
+            String category) {
+        return new Product(productID, name, price, cost, quantity, category);
     }
 }

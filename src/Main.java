@@ -12,8 +12,8 @@ public class Main {
         supermarket.addSection(furnitureSection.name);
 
         // Use EntityFactory to create products and add them to sections
-        Product apple = EntityFactory.createProduct("Apple", 0.5, 0.3, 10, "Fruits");
-        Product table = EntityFactory.createProduct("Table", 50.0, 30.0, 5, "Furniture");
+        Product apple = EntityFactory.createProduct("12", "Apple", 0.5, 0.3, 10, "Fruits");
+        Product table = EntityFactory.createProduct("13", "Table", 50.0, 30.0, 5, "Furniture");
         deliSection.addProduct(apple);
         furnitureSection.addProduct(table);
 
@@ -54,7 +54,7 @@ public class Main {
         // Record total revenue and display financial report
         FinancialTracker financialTracker = new FinancialTracker();
         financialTracker.recordRevenue(50.5); // Revenue from customer1
-        financialTracker.recordRevenue(2.5);  // Revenue from customer2
+        financialTracker.recordRevenue(2.5); // Revenue from customer2
         System.out.println("\n--- Financial Report ---");
         System.out.println(financialTracker);
     }

@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Product implements Subject{
+public class Product implements Subject {
+    private String productId;
     private String name;
     private double price;
     private double cost;
@@ -9,14 +10,18 @@ public class Product implements Subject{
     private String category;
     private List<Observer> observers; // Observers observing this product
 
-
-    public Product(String name, double price, double cost, int quantity, String category) {
+    public Product(String productId, String name, double price, double cost, int quantity, String category) {
+        this.productId = productId;
         this.name = name;
         this.price = price;
         this.cost = cost;
         this.quantity = quantity;
         this.category = category;
         this.observers = new ArrayList<>();
+    }
+
+    public String getProductId() {
+        return productId;
     }
 
     public String getName() {
@@ -27,6 +32,9 @@ public class Product implements Subject{
         return price;
     }
 
+    public void setProductId(Long productID) {
+
+    }
 
     public void setPrice(double discountedPrice) {
     }

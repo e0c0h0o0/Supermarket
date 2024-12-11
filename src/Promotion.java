@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Promotion implements Subject{
+public class Promotion implements Subject {
     private String name; // Name of the promotion
     private double discountRate; // Discount rate (e.g., 0.2 for 20% off)
     private List<Product> applicableProducts; // List of products eligible for this promotion
-    private List<Observer> observers; // 订阅该促销的观察者（顾客）
+    private List<Observer> observers; // Observers (customers) subscribed to the promotion
 
     // Constructor
     public Promotion(String name, double discountRate, List<Product> applicableProducts) {
@@ -53,7 +53,7 @@ public class Promotion implements Subject{
         }
     }
 
-    // 实现 Subject 接口方法
+    // Implement the Subject interface methods
     @Override
     public void addObserver(Observer observer) {
         observers.add(observer);
